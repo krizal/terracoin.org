@@ -1,0 +1,10 @@
+site:
+    title: 'Terracoin Digital Currency'
+    description: 'TerraCoin crypto currency is a Bitcoin fork with a shorter delay between blocks.'
+    keywords: 'digital,currency,trc,terracoin,p2p,peertopeer,electronic,payment,decentralized,distributed'
+    author: Terracoin
+    pretty_urls: false
+    posts_per_page: 5
+    enable_gzip: true
+smartypants:
+    enable: true

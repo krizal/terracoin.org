@@ -8,8 +8,8 @@
   <meta name="description" content="TerraCoin crypto currency is a Bitcoin fork with a shorter delay between blocks.">
   <meta name="author" content="Terracoin">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="/css/readable.css" rel="stylesheet" title="default" />
-  <link href="/css/slate.css" rel="alternate stylesheet" media="screen" title="slate" />
+  <link href="/css/readable.css" rel="alternate stylesheet" title="readable media="screen"" />
+  <link href="/css/slate.css" rel="stylesheet" media="screen" title="default" />
   <link href="/css/bootswatch.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <script type="text/javascript">
@@ -135,49 +135,70 @@ strip terracoin-qt
     </article>
         <article>
         <header>
-            <h2><a href="/2012/10/31/sourceforge-project-created.html">SourceForge project created</a></h2>
-            <small>October 31, 2012
+            <h2><a href="/2013/08/10/Hashrate_spikes_and_network_abuse.html">Network hashrate spikes and abuse</a></h2>
+            <small>August 10, 2013
                                                 | <a href="/news.html">news</a>
                             </small>
         </header>
         <section>
-            <p>The Terracoin project is now also hosted on sourceforge.</p>
+            <p>This news entry was forged later (on October 6, 2013 while rewriting website), to summarize several months of network abuse and gigantic hashrate spikes.</p>
 
-<p>This includes discussion forum, mailing lists, sourcecode and windows binaries.</p>
+<p>Less than two weeks after the second alternate currencies exchange site provided TRC trading, the terracoin network ran into some serious troubles. Gigantic hashrates spikes were observed, going from twice to twenty times its nominal hashrate at this period.</p>
+
+<p>Multiple attempts at tuning the difficulty retarget algorithm were made, trying to counter the effects of such sudden increase in hashrate.
+In the process, a &#8220;hack&#8221; introduced to get the network of its &#8220;stuck&#8221; state was unintentionally left in the code, later leading to a big amount of terracoins collected by the attacker(s) - estimated between 120k and 150k terracoins.</p>
+
+<p>On august 8th 2013, the rapid retarget algorithm was removed and a common, static retarget window was implemented, later using a shorter window (540 blocks) to limit the effects of chain hoppers joining/leaving the network collectively.</p>
 
         </section>
     </article>
         <article>
         <header>
-            <h2><a href="/2012/10/26/github-project-created.html">Github project created</a></h2>
-            <small>October 26, 2012
+            <h2><a href="/2013/04/05/btce_adds_terracoin_trading.html">BTC-e launches trading of terracoin</a></h2>
+            <small>April 5, 2013
                                                 | <a href="/news.html">news</a>
                             </small>
         </header>
         <section>
-            <p>Terracoin project now have its own github public repository : <a href="http://github.com/terracoin">github.com/terracoin</a></p>
-
-<p>This is the main repository participate should use to fork code prior to pull requests submission.</p>
+            <p>BTC-e.com the popular crypto-currency exchange just added Terracoin (TRC) to its list of supported alternate currencies.</p>
 
         </section>
     </article>
         <article>
         <header>
-            <h2><a href="/2012/10/26/genesis-block-created.html">Genesis block created</a></h2>
-            <small>October 26, 2012
+            <h2><a href="/2013/03/25/build_0.1.2-27.html">Stable build 0.1.2-27</a></h2>
+            <small>March 25, 2013
                                                 | <a href="/news.html">news</a>
                             </small>
         </header>
         <section>
-            <p>Final production genesis block was generated and tested over a few retargetting events.</p>
+            <p>This build includes multiple performance-related improvements, a few core enhancements and various desktop client tweaks.</p>
 
-<p>Blockchain was then reset so it is clean for first users during launch phase.</p>
+<p>Our transaction notifier now automatically sign the transmitted json document (see the transaction notifier wiki page for more informations).</p>
+
+<p>New seednodes were added, and the IRC bootstrap mechanism was re-enabled, to protect from a seednode attack.</p>
+
+        </section>
+    </article>
+        <article>
+        <header>
+            <h2><a href="/2013/03/01/new_website.html">New Website Now Live</a></h2>
+            <small>March 1, 2013
+                                                | <a href="/news.html">news</a>
+                            </small>
+        </header>
+        <section>
+            <p>Previous edition of this website provided a small set of links and minimalist instructions, only suitable for intermediate and advanced users ; this new edition should fix this.</p>
+
+<p>Our new website will provide more informations, targetting both new and existing terracoin users, while also providing technical informations for third-party developers or terracoin participate.</p>
+
+<p>Support pages will progressively host more and more instructions, from quickstart guides to detailed technical instructions.</p>
 
         </section>
     </article>
     </section>
 <section>
-        </section>
+        <div class="next"><a href="/news/2.html">Previous Posts</a></div></section>
 
 
 <!-- /page content -->

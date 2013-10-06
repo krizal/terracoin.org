@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Terracoin Digital Currency - Alerts</title>
+  <title>Terracoin Digital Currency - Network hashrate spikes and abuse</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="robots" content="index,follow" />
   <meta name="keywords" content="digital,currency,trc,terracoin,p2p,peertopeer,electronic,payment,decentralized,distributed" />
@@ -49,8 +49,8 @@
         <ul class="nav navbar-nav">
           <li><a href="/">Home</a></li>
           <li><a href="/about.html">About</a></li>
-          <li><a href="/news.html">News</a></li>
-          <li class="active"><a href="/alerts.html">Alerts</a></li>
+          <li class="active"><a href="/news.html">News</a></li>
+          <li><a href="/alerts.html">Alerts</a></li>
           <li><a href="/howto.html">Howto</a></li>
         </ul>
 
@@ -68,24 +68,29 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h1>Alerts</h1>
+    <h1>Network hashrate spikes and abuse</h1>
   </div><!-- /col-md-12 -->
 </div><!-- /row -->
 
 <!-- optional summary -->
-
+ <div class="row">
+  <div class="col-md-12">
+    <div class="jumbotron">
+      <p>Gigantic hashrate increase and spikes observed. Difficulty algorithm abused.</p>
+    </div>
+  </div>
+</div><!-- row -->
+ 
 <div class="row">
 <!-- page content -->
-<p>This page lists the last alerts sent to terracoin clients in order to notify users of critical network status and mandatory client updates.</p>
+<p>This news entry was forged later (on October 6, 2013 while rewriting website), to summarize several months of network abuse and gigantic hashrate spikes.</p>
 
-<p>Those alerts are broadcasted and relayed by enduser clients or daemons until canceled or expired. <a href="https://github.com/terracoin/terracoin/wiki/ClientAlerts">read more</a></p>
+<p>Less than two weeks after the second alternate currencies exchange site provided TRC trading, the terracoin network ran into some serious troubles. Gigantic hashrates spikes were observed, going from twice to twenty times its nominal hashrate at this period.</p>
 
-<p><!-- special 'page' instead of blog post for first alert --></p>
+<p>Multiple attempts at tuning the difficulty retarget algorithm were made, trying to counter the effects of such sudden increase in hashrate.
+In the process, a &#8220;hack&#8221; introduced to get the network of its &#8220;stuck&#8221; state was unintentionally left in the code, later leading to a big amount of terracoins collected by the attacker(s) - estimated between 120k and 150k terracoins.</p>
 
-<h3>Alert 0.8.0.2</h3>
-
-<p>Your Terracoin client is soon to become obsolete, you should upgrade as soon as possible.
-<a href="alert/0.8.0.2.html">read more</a> &#8212; September 25, 2013</p>
+<p>On august 8th 2013, the rapid retarget algorithm was removed and a common, static retarget window was implemented, later using a shorter window (540 blocks) to limit the effects of chain hoppers joining/leaving the network collectively.</p>
 
 <!-- /page content -->
 </div><!-- /row -->
@@ -93,7 +98,7 @@
 <div class="container">
   <div class="row-fluid">
     <div class="span12 pull-right">
-      October 6, 2013
+      August 10, 2013
     </div>
   </div>
 </dif>

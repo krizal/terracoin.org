@@ -1,0 +1,45 @@
+---
+title: Build 0.8.0.2
+time: 04:24:36
+date: September 25, 2013
+category: news
+summary: client build 0.8.0.2 is available for download. This build will be mandatory on block 192239.
+---
+## Changelog ##
+
+This build alters the difficulty algorithm with the following parameters:
+
+* network will now retarget every 540 blocks
+* using 1.25 update limits.
+
+
+## Download links ##
+
+* source: master branch at https://github.com/terracoin/terracoin
+
+* windows binaries:
+ http://sourceforge.net/projects/terracoin/files/latest/download
+
+## Update instructions ##
+
+If you previously cloned our repository, you may update using:
+
+    cd /path/to/your/local/clone/
+    git checkout master # locally on the master branch locally
+    git pull --tags origin master # fetches and merges remote master branch
+
+### headless daemon ###
+    cd src
+    make clean
+    nice make -f makefile.unix -j 4
+    strip terracoind
+
+
+### qt-client ###
+    cd /path/to/your/local/clone/
+    make clean qmake USE_IPV6=-
+    nice make -j 4
+    strip terracoin-qt
+
+Build was announced to our mailing lists, including a few known services (btc-e, vircurex, coinotron).
+

@@ -1,6 +1,89 @@
 ---
 title: Homepage
 date: 2013-10-01 02:57
-section: home
+category: home
+layout: homepage
+format: none
 ---
-A new page.
+
+    <!-- jumbotron -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="jumbotron">
+          <h2>Terracoin</h2>
+          <p>Peer to peer decentralized digital currency with no central authority, no chargeback and low transaction fees.</p>
+        </div><!-- jumbotron -->
+      </div><!-- col-lg-12 -->
+    </div>
+
+    <!-- terracoin 0.8.0.2 mandatory warning -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="bs-example">
+          <div class="alert alert-dismissable alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h4>Mandatory build warning</h4>
+            <p>Terracoin client version 0.8.0.2 was made mandatory on October 10th 2013. Please <a href="{{ site.root }}support/upgrade/" title="Terracoin client upgrade howto" class="alert-link">upgrade</a> your terracoin client before sending any payment.</p>
+          </div><!-- /alert alert-dismissable alert-warning -->
+        </div><!-- /bs-example -->
+      </div><!-- /col-lg-12 -->
+    </div><!-- /row -->
+
+    <!-- highlights title -->
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Highlights</h3>
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+
+    <!-- highlights panel -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+           <b>worldwide coverage:</b><br/>
+           take a few seconds to generate a receiving address using your terracoin client and you are ready to accept payments from any country.
+          </div>
+        </div><!-- panel panel-default -->
+      </div><!-- col-md-4 -->
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+          <b>opensource:</b><br/>
+          no hidden surprise, anyone may audit the full sourcecode at any time.
+          </div>
+        </div>
+      </div><!-- col-md-4 -->
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+          <b>community-driven:</b><br/>
+          based on the bitcoin currency, terracoin regularly include updates from both communities contributors.
+          </div>
+        </div>
+      </div><!-- col-md-4 -->
+    </div><!-- row -->
+
+    <!-- news title -->
+    <div class="row">
+      <div class="col-md-12">
+        <h3>News</h3>
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+
+    <!-- last 3 news -->
+    <div class="row">
+    {% for post in blog.posts.in_category('news').limit(3)  %}
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+           <b>{{ post.title }}</b><br/>
+           {{ post.summary }} -- <a href="{{ site.root }}{{ post.slug }}" title="Terracoin news: {{ post.title }}">read more</a><br/>
+           <span class="pull-right small">{{ post.date }}</span>
+          </div>
+        </div><!-- panel panel-default -->
+      </div><!-- col-md-4 -->
+    {% endfor %}
+    </div><!-- row -->
+
+

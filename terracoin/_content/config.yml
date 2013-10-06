@@ -5,6 +5,7 @@ site:
     author: Terracoin
     pretty_urls: false
     posts_per_page: 5
+    post_url: '%year%/%month%/%day%/%slug%.html'
     enable_gzip: true
 smartypants:
     enable: true

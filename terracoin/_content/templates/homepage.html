@@ -64,36 +64,7 @@
 <div class="container">
 <!-- content -->
 
-<div class="row">
-  <div class="col-md-12">
-    <h1>{{ page.title }}</h1>
-  </div><!-- /col-md-12 -->
-</div><!-- /row -->
-
-<!-- optional summary -->
-{% if page.summary %}
-<div class="row">
-  <div class="col-md-12">
-    <div class="jumbotron">
-      <p>{{ page.summary }}</p>
-    </div>
-  </div>
-</div><!-- row -->
-{% endif %}
-
-<div class="row">
-<!-- page content -->
 {{ content|raw }}
-<!-- /page content -->
-</div><!-- /row -->
-
-<div class="container">
-  <div class="row-fluid">
-    <div class="span12 pull-right">
-      {{ page.date }}
-    </div>
-  </div>
-</dif>
 
 <!-- /content -->
 </div><!-- /container -->

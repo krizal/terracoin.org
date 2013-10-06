@@ -12,15 +12,21 @@ for now, PieCrust's git-stable branch is simply cloned locally:
  git checkout git-stable
 
 
-# piecrust setup #
+# website creation #
 
 piecrust/bin/chef init terracoin
+
+
+# generating static pages #
+
 cd terracoin
 ../piecrust/bin/chef bake
+
 
 # site parameters #
 
 vi _content/config.yml
+
 
 # page creation #
 

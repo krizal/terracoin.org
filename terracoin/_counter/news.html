@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Terracoin Digital Currency</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index,follow" />
+  <meta name="keywords" content="digital,currency,trc,terracoin,p2p,peertopeer,electronic,payment,decentralized,distributed" />
+  <meta name="description" content="TerraCoin crypto currency is a Bitcoin fork with a shorter delay between blocks.">
+  <meta name="author" content="Terracoin">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="/css/readable.css" rel="stylesheet" title="default" />
+  <link href="/css/slate.css" rel="alternate stylesheet" media="screen" title="slate" />
+  <link href="/css/bootswatch.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35886017-1']);
+      _gaq.push(['_setDomainName', 'terracoin.org']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+  </script>
+  <style type="text/css">
+   body {
+       padding-bottom: 180px;
+   }
+  </style>
+</head>
+<body>
+
+  <div class="navbar navbar-default navbar-fixed-top">
+
+    <div class="container">
+
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand">Terracoin</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div><!-- navbar-header -->
+
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/news.html">News</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/downloads.html">Downloads</a></li>
+        </ul>
+      </div><!-- navbar-collapse collapse #navbar-main -->
+
+    </div><!-- container -->
+
+  </div><!-- navbar navbar-default navbar-fixed-top -->
+
+<div class="container">
+<!-- content -->
+
+<div class="row">
+  <div class="col-md-12">
+    <h1></h1>
+  </div><!-- /col-md-12 -->
+</div><!-- /row -->
+
+<!-- optional summary -->
+
+<div class="row">
+<!-- page content -->
+<h2>Posts in news</h2>
+
+<section>
+        <article>
+        <header>
+            <h2><a href="/2013/09/25/build-0.8.0.2.html">Build 0.8.0.2</a></h2>
+            <small>September 25, 2013
+                                                | <a href="/news.html">news</a>
+                            </small>
+        </header>
+        <section>
+            <h2>Changelog</h2>
+
+<p>This build alters the difficulty algorithm with the following parameters:</p>
+
+<ul>
+<li>network will now retarget every 540 blocks</li>
+<li>using 1.25 update limits.</li>
+</ul>
+
+<h2>Download links</h2>
+
+<ul>
+<li><p>source: master branch at https://github.com/terracoin/terracoin</p></li>
+<li><p>windows binaries:
+http://sourceforge.net/projects/terracoin/files/latest/download</p></li>
+</ul>
+
+<h2>Update instructions</h2>
+
+<p>If you previously cloned our repository, you may update using:</p>
+
+<pre><code>cd /path/to/your/local/clone/
+git checkout master # locally on the master branch locally
+git pull --tags origin master # fetches and merges remote master branch
+</code></pre>
+
+<h3>headless daemon</h3>
+
+<pre><code>cd src
+make clean
+nice make -f makefile.unix -j 4
+strip terracoind
+</code></pre>
+
+<h3>qt-client</h3>
+
+<pre><code>cd /path/to/your/local/clone/
+make clean qmake USE_IPV6=-
+nice make -j 4
+strip terracoin-qt
+</code></pre>
+
+<p>Build was announced to our mailing lists, including a few known services (btc-e, vircurex, coinotron).</p>
+
+        </section>
+    </article>
+        <article>
+        <header>
+            <h2><a href="/2012/10/26/genesis-block-created.html">Genesis block created</a></h2>
+            <small>October 26, 2012
+                                                | <a href="/news.html">news</a>
+                            </small>
+        </header>
+        <section>
+            <p>Final production genesis block was generated and tested over a few retargetting events.</p>
+
+<p>Blockchain was then reset so it is clean for first users during launch phase.</p>
+
+        </section>
+    </article>
+    </section>
+<section>
+        </section>
+
+
+<!-- /page content -->
+</div><!-- /row -->
+
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12 pull-right">
+      October 1, 2013
+    </div>
+  </div>
+</dif>
+
+<!-- /content -->
+</div><!-- /container -->
+
+    <div class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <div class="col-sm-2">
+          <b>Community</b><br/>
+          <a href="http://sourceforge.net/p/terracoin/mailman/" class="small" title="Terracoin mailing lists">Mailing lists</a><br/>
+          <a href="http://sourceforge.net/p/terracoin/discussion/" class="small" title="Terracoin discussion forums">Discussion forum</a>
+        </div>
+
+        <div class="col-sm-2">
+         <b>Downloads</b><br/>
+         <a href="http://sourceforge.net/projects/terracoin/files/latest/download" class="small" title="Windows Terracoin download">Windows</a><br/>
+         <a href="http://sourceforge.net/projects/terracoin/files/SatoshiClone/" class="small" title="Windows Terracoin development clients download">Development</a>
+        </div>
+
+        <div class="col-sm-2">
+         <b>Participate</b><br/>
+         <a href="https://github.com/terracoin/terracoin/issues" class="small" title="Terracoin issue tracker">Issue Tracker</a><br/>
+         <a href="https://github.com/terracoin/terracoin/wiki" class="small" title="Terracoin wiki">Wiki</a>
+        </div>
+
+        <div class="col-sm-2">
+         <b>Sourcecode</b><br/>
+         <a href="https://github.com/terracoin/terracoin" title="Terracoin github project page">Github</a><br/>
+         <a href="http://sourceforge.net/projects/terracoin/" title="Terracoin sourceforge project page">Sourceforge</a>
+        </div>
+
+        <div class="col-sm-2 pull-right">
+         <b>Forum</b><br/>
+         <a href="http://www.terracointalk.org/" title="Terracoin discussion forum"><img src="/images/terracointalk.png" alt="terracointalk.org" width="32" height="32" /></a>
+        </div>
+      </div><!-- container -->
+    </div>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bs.min.js"></script>
+  <script src="/js/bootswatch.js"></script>
+</body>
+</html>
+

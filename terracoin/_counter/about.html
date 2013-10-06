@@ -8,8 +8,8 @@
   <meta name="description" content="TerraCoin crypto currency is a Bitcoin fork with a shorter delay between blocks.">
   <meta name="author" content="Terracoin">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="/css/readable.css" rel="alternate stylesheet" title="readable media="screen"" />
-  <link href="/css/slate.css" rel="stylesheet" media="screen" title="default" />
+  <link href="/css/readable.css" rel="stylesheet" title="readable" media="screen" />
+  <link href="/css/slate.css" rel="alternate stylesheet" media="screen" title="slate" />
   <link href="/css/bootswatch.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <script type="text/javascript">
@@ -52,6 +52,7 @@
           <li><a href="/news.html">News</a></li>
           <li><a href="/alerts.html">Alerts</a></li>
           <li><a href="/howto.html">Howto</a></li>
+          <li><a href="/services.html">Services</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -76,7 +77,50 @@
 
 <div class="row">
 <!-- page content -->
-<p>A new page.</p>
+<p>Terracoin (abbreviated TRC) is a peer to peer decentralized currency based on Bitcoin.</p>
+
+<p>Terracoin has no central issuer; instead, the peer-to-peer network regulates Terracoin balances, transactions and issuance according to consensus in network software.</p>
+
+<p>Terracoins are issued to enduser nodes that verify transactions through computing power; it is established that there will be a limited and scheduled release of no more than <strong>42 million coins</strong>.</p>
+
+<h3>Overview</h3>
+
+<p>Terracoin enables instant payments to anyone, anywhere in the world. Terracoin uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network.</p>
+
+<p>Payments (&#8220;transactions&#8221;) are broadcasted to the network by the enduser node initiating the payment, verified and grouped together as entities called &#8220;blocks&#8221;.
+Called &#8220;mining&#8221;, this process of putting transactions together as blocks involves multiple nodes in the network, validating transactions and propagating the created blocks back to the network.</p>
+
+<p>A transaction consist of one or multiple &#8220;inputs&#8221; (coins origin), and one or multiple &#8220;outputs&#8221; (coins destination addresses). Enduser nodes configured for mining constantly validates transactions, ensuring a given input matches a previous transaction output, also preventing malicious nodes from double-spending coins.</p>
+
+<p>Once validated by &#8220;miners&#8221;, previously broadcasted transactions gets included in blocks of data, propagated to every node in the network. Those blocks are then put together in a chain (&#8220;blockchain&#8221;), originating from the first block that ever existed (the &#8220;genesis block&#8221;).
+Every node in the network maintains a local copy of this full blockchain (protocol also allow lightweight, &#8220;headers only&#8221; blockchain mode), for transaction input lookups &amp; validation.</p>
+
+<p>By design, to prevent malicious nodes from building parallel blockchains with forged fake transactions, only the &#8220;longest&#8221; blockchain gets used by the network. With the sustained network computer power involved, a malicious node would have to reconstruct the whole blockchain (at lease after last &#8220;checkpoint&#8221;) faster than the network itself, what is impossible with a sufficient network hashrate ; this is the reason why the currency gets stronger with every new &#8220;miner&#8221; joining the network.</p>
+
+<h3>Creation of coins</h3>
+
+<p>In order to drive computing power to the validation process, the only way coins are created is by rewarding &#8220;miners&#8221; (nodes configured for transaction validation).
+An enduser node which successfully assembled a block of transactions gets rewarded by the issuance of 20 terracoins (20 TRC). The network itself automatically adjust the computing power required for this process ; this adjustment is called &#8220;retargetting&#8221;.
+The peer to peer network adjusts this difficulty so a new block gets created at 2 minutes interval, according to the effective network hashing power.
+This retargetting occurs at 540 blocks interval, lowering or increasing the block creation &#8220;difficulty&#8221;.
+To effectively limit the total amount of coins to the finite number of 42Millions terracoins, this block reward gets automatically halved every 1050000 blocks (4 years).</p>
+
+<h3>Sending and receiving payments</h3>
+
+<p>When first starting the terracoin client, you get a &#8220;wallet&#8221;, a collection of keypairs used internally to create and sign transactions.
+With those keypairs, you get one or more terracoin addresses, used to receive payments. You can create multiple terracoin addresses, each one given to a different customer, while waiting for his payment.
+Here is a sample terracoin address: 14kBtNP5NfCFTFvn6jsEL6TUg8hVBehwYx</p>
+
+<p>Once created, a terracoin address may be used to receive payments, even while you&#8217;re not running your terracoin client.
+Sending payments requires you to run the terracoin client (or a thirdparty web wallet). Once started, the terracoin client allows you to send worldwide payments instantly. Your payment is confirmed by the network within minutes (120 seconds for the first confirmation on average).</p>
+
+<h3>Where to start?</h3>
+
+<p>Whether planning to use terracoins as a customer, hobbyist or merchant, you should first start by running the terracoin client.
+Windows binaries are available for download at our sourceforge project page ; download the latest stable package, install or unzip the file, then run terracoin-qt.exe binary.
+Non-windows users should build the binary files from terracoin sourcecode.</p>
+
+<p>On first launch, the terracoin client will &#8220;synchronize with the network&#8221;, locally downloading the full blockchain. Upon completion, you are ready to send and receive payments.</p>
 
 <!-- /page content -->
 </div><!-- /row -->

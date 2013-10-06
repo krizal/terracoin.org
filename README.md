@@ -33,3 +33,23 @@ vi _content/config.yml
 cd terracoin
 ../piecrust/bin/chef prepare page index
 
+news, alerts and howto documents will consist of 'blog' posts using our simple blog post template.
+
+
+# categories and tags #
+
+piecrust 'categories' matches the site's sestions:
+ * home
+ * about
+ * news
+ * alert
+ * howto
+
+'tags' are used within the 'howto' category :
+ * client
+ * wallet
+ * ...
+
+note that first terracoin client alert page was not created as a blog post but as a page instead, to keep existing url.
+Following alerts will be created as blog posts under category 'alert'
+

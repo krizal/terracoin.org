@@ -50,6 +50,8 @@
           <li{% if page.category == 'home' %} class="active"{% endif %}><a href="{{ site.root }}">Home</a></li>
           <li{% if page.category == 'about' %} class="active"{% endif %}><a href="{{ site.root }}about.html">About</a></li>
           <li{% if page.category == 'news' %} class="active"{% endif %}><a href="{{ site.root }}news.html">News</a></li>
+          <li{% if page.category == 'alert' %} class="active"{% endif %}><a href="{{ site.root }}alerts.html">Alerts</a></li>
+          <li{% if page.category == 'howto' %} class="active"{% endif %}><a href="{{ site.root }}howto.html">Howto</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -72,6 +74,19 @@
 
 <!-- optional summary -->
 {% if page.summary %}
+ {% if page.category == 'alert' %}
+ <div class="row">
+   <div class="col-lg-12">
+     <div class="bs-example">
+       <div class="alert alert-dismissable alert-warning">
+         <button type="button" class="close" data-dismiss="alert">&times;</button>
+         <h4>Alert</h4>
+         <p>{{ page.summary }}</p>
+       </div><!-- /alert alert-dismissable alert-warning -->
+     </div><!-- /bs-example -->
+   </div><!-- /col-lg-12 -->
+ </div><!-- /row -->
+ {% else %}
 <div class="row">
   <div class="col-md-12">
     <div class="jumbotron">
@@ -79,6 +94,7 @@
     </div>
   </div>
 </div><!-- row -->
+ {% endif %}
 {% endif %}
 
 <div class="row">

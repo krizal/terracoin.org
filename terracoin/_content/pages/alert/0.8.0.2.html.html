@@ -1,0 +1,48 @@
+---
+title: Alert 0.8.0.2
+date: 2013-09-25 05:17
+category: alert
+summary: Your Terracoin client is soon to become obsolete, you should upgrade as soon as possible.
+---
+
+## Details ##
+Terracoin client version 0.8.0.2 will be mandatory at block 192239 (estimated date: Oct 2nd 2013).
+
+Terracoin client v0.8.0.2 alters the blockchain parameters so it will update the difficulty more often, with smaller steps between changes.
+This will hopefully be the last update to those parameters.
+
+Sent on: 2013-09-25
+
+Expires: 23/01/2014 16:06:26
+
+Message: Mandatory update 0.8.0.2 : see terracoin.org/alert/0.8.0.2.html
+
+## Downloads ##
+
+### windows ###
+Windows binaries may be downloaded from our sourceforge mirror :
+http://sourceforge.net/projects/terracoin/files/latest/download
+
+### source ###
+master branch at https://github.com/terracoin/terracoin
+or
+https://github.com/terracoin/terracoin/archive/v0.8.0.2.tar.gz
+
+If you previously cloned our repository, you may update using:
+    cd /path/to/your/local/clone/
+    git checkout master
+    git pull --tags origin master
+
+#### headless daemon ####
+    cd /path/to/your/local/clone/src/
+    make distclean
+    nice make -f makefile.unix -j 4
+    strip terracoind
+
+#### qt-client ####
+    cd /path/to/your/local/clone/
+    make distclean
+    qmake USE_IPV6=-
+    nice make -j 4
+    strip terracoin-qt
+

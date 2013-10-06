@@ -1,0 +1,20 @@
+---
+title: Alerts
+date: 2013-10-06 03:07
+category: alert
+---
+This page lists the last alerts sent to terracoin clients in order to notify users of critical network status and mandatory client updates.
+
+Those alerts are broadcasted and relayed by enduser clients or daemons until canceled or expired. [read more](https://github.com/terracoin/terracoin/wiki/ClientAlerts)
+
+<!-- special 'page' instead of blog post for first alert -->
+### Alert 0.8.0.2 ###
+   Your Terracoin client is soon to become obsolete, you should upgrade as soon as possible.
+[read more](alert/0.8.0.2.html) -- September 25, 2013
+
+{% for post in blog.posts.in_category('alert') %}
+### {{ post.title }} ###
+    {{ post.summary }}
+[read more]({{ post.slug }} -- {{ post.date }}
+{% endfor %}
+

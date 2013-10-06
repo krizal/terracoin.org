@@ -1,0 +1,54 @@
+1. setup your local terracoin client/daemon to enable its rpc server:
+
+  create a new directory for terracoin data. (ex: $HOME/terracoin)
+
+  create a new text file terracoin.conf under this directory ($HOME/terracoin/terracoin.conf) containing:
+       server=1
+       rpcuser=YOURUSER
+       rpcpassword=YOURPASSWORD
+       rpcallowip=127.0.0.1
+       rpcport=13332
+
+  create a new text file start-trc.sh under this directory (or ~/bin/) containing:
+       #!/bin/sh
+       $HOME/terracoin/terracoin-qt -noirc -gen=0 -port=13333 -datadir=/home/YOURUNIXUSERNAME/terracoin/
+      
+  chmod 750 $HOME/terracoin/start-trc.sh
+
+2. build your terracoin client/daemon :
+  mkdir ~/build && cd ~/build/
+  git clone git://github.com/terracoin/terracoin.git
+  cd terracoin/
+  qmake USE_UPNP=1 USE_IPV6=-
+  make -j 2
+  strip terracoin-qt
+  cp terracoin-qt ~/terracoin/
+
+3. start your terracoin client/daemon:
+  execute $HOME/terracoin/start-trc.sh
+
+4. retrieve p2pool
+  cd ~/build/
+  git clone git://github.com/forrestv/p2pool.git
+  sudo apt-get install python-argparse python-twisted
+
+5. prepare p2pool:
+  create a new file $HOME/build/p2pool/start-trc.sh containing: (replace 1Cj..MmrN with your terracoin address)
+       #!/bin/sh
+       python run_p2pool.py --net terracoin -a 1CjUFq1iZJQRFNtdQzuKo1JaQNDFM3MmrN -f 0 --bitcoind-p2p-port 13333 --bitcoind-rpc-port 13332 YOURUSER YOURPASSWORD
+  
+  chmod 750 $HOME/build/p2pool/start-trc.sh
+
+6. start p2pool:
+  When your terracoin client/daemon is fully synchronized, start p2pool by executing $HOME/build/p2pool/start-trc.sh
+  After a few seconds, you can point your web browser to http://127.0.0.1:9322/
+
+7. start your miner app
+  point your miner application to http://127.0.0.1:9322
+  If you use a random username, payouts will go to previously configured address.
+  If you use a valid terracoin address as a miner username, your payouts will go there.
+  Use a random password.
+
+NOTE : for optimal performance, you're encouraged to forward/open inbound tcp ports 9323 and 13333
+       (p2pool + trc) on your firewall/router
+

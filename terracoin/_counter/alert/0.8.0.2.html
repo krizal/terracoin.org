@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Terracoin Digital Currency - About</title>
+  <title>Terracoin Digital Currency - Alert 0.8.0.2</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="robots" content="index,follow" />
   <meta name="keywords" content="digital,currency,trc,terracoin,p2p,peertopeer,electronic,payment,decentralized,distributed" />
@@ -48,9 +48,9 @@
       <div class="navbar-collapse collapse" id="navbar-main">
         <ul class="nav navbar-nav">
           <li><a href="/">Home</a></li>
-          <li class="active"><a href="/about.html">About</a></li>
+          <li><a href="/about.html">About</a></li>
           <li><a href="/news.html">News</a></li>
-          <li><a href="/alerts.html">Alerts</a></li>
+          <li class="active"><a href="/alerts.html">Alerts</a></li>
           <li><a href="/howto.html">Howto</a></li>
         </ul>
 
@@ -68,15 +68,72 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h1>About</h1>
+    <h1>Alert 0.8.0.2</h1>
   </div><!-- /col-md-12 -->
 </div><!-- /row -->
 
 <!-- optional summary -->
-
+  <div class="row">
+   <div class="col-lg-12">
+     <div class="bs-example">
+       <div class="alert alert-dismissable alert-warning">
+         <button type="button" class="close" data-dismiss="alert">&times;</button>
+         <h4>Alert</h4>
+         <p>Your Terracoin client is soon to become obsolete, you should upgrade as soon as possible.</p>
+       </div><!-- /alert alert-dismissable alert-warning -->
+     </div><!-- /bs-example -->
+   </div><!-- /col-lg-12 -->
+ </div><!-- /row -->
+ 
 <div class="row">
 <!-- page content -->
-<p>A new page.</p>
+<h2>Details</h2>
+
+<p>Terracoin client version 0.8.0.2 will be mandatory at block 192239 (estimated date: Oct 2nd 2013).</p>
+
+<p>Terracoin client v0.8.0.2 alters the blockchain parameters so it will update the difficulty more often, with smaller steps between changes.
+This will hopefully be the last update to those parameters.</p>
+
+<p>Sent on: 2013-09-25</p>
+
+<p>Expires: 23/01/2014 16:06:26</p>
+
+<p>Message: Mandatory update 0.8.0.2 : see terracoin.org/alert/0.8.0.2.html</p>
+
+<h2>Downloads</h2>
+
+<h3>windows</h3>
+
+<p>Windows binaries may be downloaded from our sourceforge mirror :
+http://sourceforge.net/projects/terracoin/files/latest/download</p>
+
+<h3>source</h3>
+
+<p>master branch at https://github.com/terracoin/terracoin
+or
+https://github.com/terracoin/terracoin/archive/v0.8.0.2.tar.gz</p>
+
+<p>If you previously cloned our repository, you may update using:
+    cd /path/to/your/local/clone/
+    git checkout master
+    git pull &#8212;tags origin master</p>
+
+<h4>headless daemon</h4>
+
+<pre><code>cd /path/to/your/local/clone/src/
+make distclean
+nice make -f makefile.unix -j 4
+strip terracoind
+</code></pre>
+
+<h4>qt-client</h4>
+
+<pre><code>cd /path/to/your/local/clone/
+make distclean
+qmake USE_IPV6=-
+nice make -j 4
+strip terracoin-qt
+</code></pre>
 
 <!-- /page content -->
 </div><!-- /row -->
@@ -84,7 +141,7 @@
 <div class="container">
   <div class="row-fluid">
     <div class="span12 pull-right">
-      October 6, 2013
+      September 25, 2013
     </div>
   </div>
 </dif>

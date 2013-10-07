@@ -6,5 +6,59 @@ category: howto
 tags: [ client, wallet ]
 summary: How to upgrade your terracoin client.
 ---
-coming soon (as of 2013 october 6th).
+Terracoin installers are not distributed yet.
+Windows executables are generated under linux using mingw, then uploaded to our [sourceforge project page](http://sourceforge.net/projects/terracoin/).
+
+### Windows ###
+
+The Terracoin client ("wallet") upgrade consists in two steps :
+
+* downloading the latest stable terracoin archive from [sourceforge](http://sourceforge.net/projects/terracoin/files/latest/download)
+* extracting this archive over your previous installation (you can use [7Zip](http://www.7-zip.org/) to extract Terracoin files from this archive).
+
+Before proceeding, you should **backup your wallet** by copying your "wallet.dat" file to a safe place.
+
+This file is located under the following directory:
+
+    c:\Users\yourusername\AppData\Roaming\Terracoin
+
+
+
+### Unix/Linux ###
+
+No binaries are provided, you have to retrieve the latest source files and build the client locally.
+You can download source tarballs or use git to retrieve or update your local copy of terracoin source files :
+
+#### Downloading tagged releases ####
+
+Download and extract latest release from https://github.com/terracoin/terracoin/releases
+
+#### Alternative: downloading using git ####
+
+Execute the following commands on your locally cloned terracoin repository :
+(previously cloned using "git clone https://github.com/terracoin/terracoin.git")
+
+    cd /path/to/your/local/clone/
+    git checkout master
+    git pull --tags origin master
+
+
+#### Compiling your Terracoin binaries ####
+
+build Terracoin headless daemon:
+
+    cd src
+    make clean
+    nice make -f makefile.unix -j 4
+    strip terracoind
+
+build Terracoin graphical client:
+
+    cd /path/to/your/local/clone/
+    make clean
+    qmake USE_IPV6=-
+    nice make -j 4
+    strip terracoin-qt
+
+
 

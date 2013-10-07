@@ -89,7 +89,62 @@
                             </small>
         </header>
         <section>
-            <p>coming soon (as of 2013 october 6th).</p>
+            <p>Terracoin installers are not distributed yet.
+Windows executables are generated under linux using mingw, then uploaded to our <a href="http://sourceforge.net/projects/terracoin/">sourceforge project page</a>.</p>
+
+<h3>Windows</h3>
+
+<p>The Terracoin client (&#8220;wallet&#8221;) upgrade consists in two steps :</p>
+
+<ul>
+<li>downloading the latest stable terracoin archive from <a href="http://sourceforge.net/projects/terracoin/files/latest/download">sourceforge</a></li>
+<li>extracting this archive over your previous installation (you can use <a href="http://www.7-zip.org/">7Zip</a> to extract Terracoin files from this archive).</li>
+</ul>
+
+<p>Before proceeding, you should <strong>backup your wallet</strong> by copying your &#8220;wallet.dat&#8221; file to a safe place.</p>
+
+<p>This file is located under the following directory:</p>
+
+<pre><code>c:\Users\yourusername\AppData\Roaming\Terracoin
+</code></pre>
+
+<h3>Unix/Linux</h3>
+
+<p>No binaries are provided, you have to retrieve the latest source files and build the client locally.
+You can download source tarballs or use git to retrieve or update your local copy of terracoin source files :</p>
+
+<h4>Downloading tagged releases</h4>
+
+<p>Download and extract latest release from https://github.com/terracoin/terracoin/releases</p>
+
+<h4>Alternative: downloading using git</h4>
+
+<p>Execute the following commands on your locally cloned terracoin repository :
+(previously cloned using &#8220;git clone https://github.com/terracoin/terracoin.git&#8221;)</p>
+
+<pre><code>cd /path/to/your/local/clone/
+git checkout master
+git pull --tags origin master
+</code></pre>
+
+<h4>Compiling your Terracoin binaries</h4>
+
+<p>build Terracoin headless daemon:</p>
+
+<pre><code>cd src
+make clean
+nice make -f makefile.unix -j 4
+strip terracoind
+</code></pre>
+
+<p>build Terracoin graphical client:</p>
+
+<pre><code>cd /path/to/your/local/clone/
+make clean
+qmake USE_IPV6=-
+nice make -j 4
+strip terracoin-qt
+</code></pre>
 
         </section>
     </article>
